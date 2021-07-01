@@ -6,10 +6,11 @@
     </head>
     <body class="d-flex flex-column h-100">
         @include('layout.partials.nav')
-        @include('layout.partials.header')
-        <div class="container">
-        @yield('content')
-        </div>
+        <main class="flex-shrink-0">
+            <div class="container">
+                @yield('content')
+            </div>
+        </main>
         @include('layout.partials.footer')
         @include('layout.partials.footer-scripts')
     </body>

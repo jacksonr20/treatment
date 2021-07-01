@@ -11,8 +11,8 @@ class CreateDrugsTable extends Migration
         Schema::create('drugs', function (Blueprint $table) {
             $table->id();
             $table->foreignId('treatment_id')->constrained('treatments');
-            $table->enum('type', ['Generic', 'Trade']);
-            $table->string('name', 100);
+            $table->string('generic', 100);
+            $table->string('trade', 100);
             $table->timestamps();
         });
     }
